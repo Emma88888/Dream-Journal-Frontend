@@ -1,11 +1,11 @@
 import './App.css';
 import { useState } from 'react';
 import { Route, Routes, HashRouter } from "react-router-dom";
-import Home from './Home';
-import NavBar from './NavBar';
-import NewDreamText from './NewDreamText';
+import Home from '../Home/Home';
+import NavBar from '../NavBar/NavBar';
+import NewDreamText from '../NewDreams/NewDreamText';
 // import NewDreamSpeech from './NewDreamSpeech';
-import Resources from './Resources';
+import Resources from '../Resources/Resources';
 
 function App() {
 
