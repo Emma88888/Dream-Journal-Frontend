@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 // import "./Home.css";
+import axios from "axios";
 
 const Home = () => {
+  const [data, setData] = useState([])
+  const api = "http://localhost:4040/api/dream"
+  useEffect(() => {
+    axios.get(api)
+    .then(({data}) => {
+      setData(data)
+    }).catch(console.error)
+  },[])
+  console.log(data)
     return (
       <div className="home-div">
         <h1 className="title">Dream Journal </h1>

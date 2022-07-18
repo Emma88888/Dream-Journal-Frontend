@@ -1,12 +1,47 @@
 import React from "react";
+import { Link } from "react-router-dom"
+import "./style.css"
+
+const resources = [
+  {
+    title: "resource 1",
+    href: "#",
+    description: "test"
+  },
+  {
+    title: "resource 2",
+    href: "#",
+    description: "test"
+  },
+  {
+    title: "resource 3",
+    href: "#",
+    description: "test"
+  }
+]
+
+
 
 const Resources = () => {
   return (
     <div className="rsrc-div">
       <h1 className="rsrc-title">Resources</h1>
-      <p>Resource 1</p>
-      <p>Resource 2</p>
-      <p>Resource 3</p>
+      <div className="resources-container">
+      {
+        resources.map(resource => <div key={resource.title} className="resources">
+          <div className="card">
+          <Link to={resource.href}>
+          <div>
+            {resource.title}
+          </div>
+          <p>
+            {resource.description}
+          </p>
+          </Link>
+          </div>
+        </div>)
+      }
+      </div>
     </div>
   );
 };
