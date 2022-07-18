@@ -1,10 +1,4 @@
 import { useState } from 'react';
-
-// export default function NewDream({onSave}) {
-//     const [dream, setDream] = useState([]);
-//     const []
-// }
-
 import React from "react"
 
 const NewDreamText = props => {

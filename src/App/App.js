@@ -4,7 +4,7 @@ import { Route, Routes, HashRouter } from "react-router-dom";
 import Home from '../Home/Home';
 import NavBar from '../NavBar/NavBar';
 import NewDreamText from '../NewDreams/NewDreamText';
-// import NewDreamSpeech from './NewDreamSpeech';
+import NewDreamSpeech from '../NewDreams/NewDreamSpeech';
 import Resources from '../Resources/Resources';
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="/newDreamText" element={<NewDreamText/>}/>
         <Route path="/resources" element={<Resources/>}/>
-        {/* <Route path="/newDreamSpeech" element={<NewDreamSpeech/>}/> */}
+        <Route path="/newDreamSpeech" element={<NewDreamSpeech/>}/>
       </Routes>
     </HashRouter>
   );

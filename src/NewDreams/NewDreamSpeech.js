@@ -1,7 +1,23 @@
 import React from "react"
 import { useState } from "react"
 
-// const NewDreamSpeech = () => {
+const NewDreamSpeech = ({onSave}) => {
+    const [speechDream, setSpeechDream] = useState("")
+
+    return (
+        <div>
+            <button>
+                Record
+            </button>
+        </div>
+
+    )
+
+}
+
+// export default function NewDreamSpeech
+
+
 //     // let isListening = false
 //     // let note = "Waiting"
 //     const [isListening, setIsListening] = useState(isListening)
@@ -43,4 +59,4 @@ import { useState } from "react"
 //     }
 // }
 
-// export default NewDreamSpeech;
+export default NewDreamSpeech;
