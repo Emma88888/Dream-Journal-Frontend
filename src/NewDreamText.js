@@ -1,4 +1,4 @@
-// import { useState } from 'react';
+import { useState } from 'react';
 
 // export default function NewDream({onSave}) {
 //     const [dream, setDream] = useState([]);
@@ -7,7 +7,7 @@
 
 import React from "react"
 
-const NewDream = props => {
+const NewDreamText = props => {
 
     return (
         <div className="-input-box">
@@ -20,4 +20,4 @@ const NewDream = props => {
     )
 }
 
-export default NewDream;
+export default NewDreamText;
