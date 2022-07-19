@@ -4,28 +4,33 @@ import "./style.css"
 
 const resources = [
   {
-    title: "resource 1",
-    href: "#",
+    title: "The Sleep Foundation",
+    href: "https://www.sleepfoundation.org/sleep-hygiene",
     description: "test"
   },
   {
-    title: "resource 2",
-    href: "#",
+    title: "The Sleep Foundation",
+    href: "https://www.sleepfoundation.org/mental-health",
     description: "test"
   },
   {
-    title: "resource 3",
-    href: "#",
+    title: "Benefits and Tips for Dream Journaling",
+    href: "https://www.wellandgood.com/dream-journal/",
     description: "test"
   },
   {
-    title: "resource 4",
-    href: "#",
+    title: "Find Sleep Centers Near You",
+    href: "https://sleepeducation.org/sleep-center/",
     description: "test"
   },
   {
-    title: "resource 5",
-    href: "#",
+    title: "About Dreams and Nightmares",
+    href: "https://www.medicalnewstoday.com/articles/297625#bad-dreams-and-nightmares",
+    description: "test"
+  },
+  {
+    title: "Sleep Hygiene Checklist",
+    href: "https://www.medicalnewstoday.com/articles/sleep-hygiene#poor-sleep-hygiene",
     description: "test"
   }
 ]
