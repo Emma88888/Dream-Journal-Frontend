@@ -17,10 +17,18 @@ const resources = [
     title: "resource 3",
     href: "#",
     description: "test"
+  },
+  {
+    title: "resource 4",
+    href: "#",
+    description: "test"
+  },
+  {
+    title: "resource 5",
+    href: "#",
+    description: "test"
   }
 ]
-
-
 
 const Resources = () => {
   return (

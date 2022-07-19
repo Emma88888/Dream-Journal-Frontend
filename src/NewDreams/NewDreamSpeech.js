@@ -15,8 +15,6 @@ const NewDreamSpeech = ({onSave}) => {
 
 }
 
-// export default function NewDreamSpeech
-
 
 //     // let isListening = false
 //     // let note = "Waiting"
