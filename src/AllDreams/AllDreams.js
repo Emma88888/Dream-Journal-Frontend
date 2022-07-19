@@ -12,6 +12,17 @@ const [data, setData] = useState([])
     }).catch(console.error)
   },[])
   console.log(data)
+
+  const handleDelete = (e) => {
+    axios.delete(`http://localhost:4040/api/dream/${e.target.id}`)
+    window.location.reload(false)
+  };
+
+  const handleEdit = (e) => {
+    axios.delete(`http://localhost:4040/api/dream/${e.target.id}`)
+    window.location.reload(false)
+  };
+
     return (
         <div>
             {data.map((item) => {
@@ -21,6 +32,16 @@ const [data, setData] = useState([])
                         {item.dream}
                         </div>
                         {item.date}
+                        <div>
+                          <button onClick={handleDelete}>
+                            Delete dream
+                          </button>
+                        </div>
+                        <div>
+                          <button onClick={handleEdit}>
+                            Edit dream
+                          </button>
+                        </div>
                     </div>
                 )
             })}
