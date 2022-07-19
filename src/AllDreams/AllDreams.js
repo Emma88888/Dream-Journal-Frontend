@@ -19,12 +19,12 @@ const [data, setData] = useState([])
   };
 
   const handleEdit = (e) => {
-    axios.delete(`https://dream-journal-8.herokuapp.com/${e.target.id}`)
+    axios.put(`https://dream-journal-8.herokuapp.com/${e.target.id}`)
     window.location.reload(false)
   };
 
     return (
-        <div>
+        <div className="dreams-div">
             {data.map((item) => {
                 return(
                     <div key={item._id}>
@@ -33,12 +33,12 @@ const [data, setData] = useState([])
                         </div>
                         {item.date}
                         <div>
-                          <button onClick={handleDelete}>
+                          <button className="delete-button" onClick={handleDelete}>
                             Delete dream
                           </button>
                         </div>
                         <div>
-                          <button onClick={handleEdit}>
+                          <button className="edit-button" onClick={handleEdit}>
                             Edit dream
                           </button>
                         </div>

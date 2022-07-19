@@ -6,7 +6,7 @@ const NewDreamSpeech = ({onSave}) => {
 
     return (
         <div>
-            <button>
+            <button className="record-button">
                 Record
             </button>
         </div>
