@@ -15,12 +15,10 @@ const [data, setData] = useState([])
 
   const handleDelete = (e) => {
     axios.delete(`https://dream-journal-8.herokuapp.com/${e.target.id}`)
-    window.location.reload(false)
   };
 
   const handleEdit = (e) => {
     axios.put(`https://dream-journal-8.herokuapp.com/${e.target.id}`)
-    window.location.reload(false)
   };
 
     return (
