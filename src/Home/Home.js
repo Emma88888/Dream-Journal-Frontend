@@ -4,7 +4,7 @@ import axios from "axios";
 
 const Home = () => {
   const [data, setData] = useState([])
-  const api = "dream-journal.netlify.com/api/dream"
+  const api = "https://dream-journal-8.herokuapp.com/"
   useEffect(() => {
     axios.get(api)
     .then(({data}) => {

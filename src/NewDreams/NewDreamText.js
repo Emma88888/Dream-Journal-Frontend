@@ -2,7 +2,7 @@ import React from "react"
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-const api = "http://localhost:4040/api/dream"
+const api = "https://dream-journal-8.herokuapp.com/api/dream"
 
 const NewDreamText = () => {
     const navigate = useNavigate()
