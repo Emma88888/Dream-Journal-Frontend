@@ -4,7 +4,7 @@ import axios from "axios";
 
 const ShowAllDreams = () => {
 const [data, setData] = useState([])
-  const api = "http://localhost:4040/api/dream"
+  const api = "http://dream-journal.netlify.com"
   useEffect(() => {
     axios.get(api)
     .then(({data}) => {
@@ -14,12 +14,12 @@ const [data, setData] = useState([])
   console.log(data)
 
   const handleDelete = (e) => {
-    axios.delete(`http://localhost:4040/api/dream/${e.target.id}`)
+    axios.delete(`http://dream-journal.netlify.com/${e.target.id}`)
     window.location.reload(false)
   };
 
   const handleEdit = (e) => {
-    axios.delete(`http://localhost:4040/api/dream/${e.target.id}`)
+    axios.delete(`http://dream-journal.netlify.com/${e.target.id}`)
     window.location.reload(false)
   };
 
