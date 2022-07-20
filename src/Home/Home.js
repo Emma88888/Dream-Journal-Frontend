@@ -16,7 +16,7 @@ const Home = () => {
     return (
       <div className="home-div">
         <h1 className="title">Dream Journal </h1>
-        <p className="description">Description</p>
+        <p className="description">Welcome! Use this app to record your dreams with speech to text or type them into a text box to save them. Check the resources tab for articles about sleep, dreaming, and sleep hygiene.</p>
       </div>
     );
 }
