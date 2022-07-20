@@ -17,15 +17,19 @@ export default function NewDreamSpeech() {
     continuous: true,
     useLegacyResults: false
   });
+
+  const text = results.transcript
+
 //   const navigate = useNavigate()
 
 //   console.log(results)
 
   if (error) return <p>I'm sorry, web speech is not compatible with your browser!</p>;
 
-  axios.post(api)
+  axios.post(api, text)
         .then(() => {
-            console.log(results.transcript)
+            // console.log(results.toString())
+            console.log(results)
         })
         .catch(alert)
 
