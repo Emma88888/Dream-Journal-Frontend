@@ -2,6 +2,8 @@ import React, { useEffect } from "react"
 // import { useState } from "react"
 import useSpeechToText from 'react-hook-speech-to-text';
 
+const api = "https://dream-journal-8.herokuapp.com/api/dream"
+
 export default function NewDreamSpeech() {
   const {
     error,
