@@ -1,6 +1,7 @@
-import React, { useEffect } from "react"
+import React, { useNavigate, useEffect } from "react"
 // import { useState } from "react"
 import useSpeechToText from 'react-hook-speech-to-text';
+import axios from "axios";
 
 const api = "https://dream-journal-8.herokuapp.com/api/dream"
 
@@ -16,8 +17,17 @@ export default function NewDreamSpeech() {
     continuous: true,
     useLegacyResults: false
   });
+//   const navigate = useNavigate()
+
+//   console.log(results)
 
   if (error) return <p>I'm sorry, web speech is not compatible with your browser!</p>;
+
+  axios.post(api)
+        .then(() => {
+            console.log(results.transcript)
+        })
+        .catch(alert)
 
   return (
     <div>
