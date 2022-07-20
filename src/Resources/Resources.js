@@ -43,14 +43,16 @@ const Resources = () => {
       {
         resources.map(resource => <div key={resource.title} className="resources">
           <div className="card">
-          <Link to={resource.href}>
+          {/* <Link to={resource.href}> */}
+          <a href={resource.href}>
           <div>
             {resource.title}
           </div>
           <p>
             {resource.description}
           </p>
-          </Link>
+          {/* </Link> */}
+          </a>
           </div>
         </div>)
       }
