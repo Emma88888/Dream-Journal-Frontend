@@ -1,11 +1,40 @@
 import React, { useEffect } from "react"
-import { useState } from "react"
+// import { useState } from "react"
+import useSpeechToText from 'react-hook-speech-to-text';
 
-const NewDreamSpeech = ({onSave}) => {
+export default function NewDreamSpeech() {
+  const {
+    error,
+    interimResult,
+    isRecording,
+    results,
+    startSpeechToText,
+    stopSpeechToText,
+        } = useSpeechToText({
+    continuous: true,
+    useLegacyResults: false
+  });
+
+  if (error) return <p>I'm sorry, web speech is not compatible with your browser!</p>;
+
+  return (
+    <div>
+      <h1>Recording: {isRecording.toString()}</h1>
+      <button onClick={isRecording ? stopSpeechToText : startSpeechToText}>
+        {isRecording ? 'Stop Recording' : 'Start Recording'}
+      </button>
+      <ul>
+        {results.map((result) => (
+          <li key={result.timestamp}>{result.transcript}</li>
+        ))}
+        {interimResult && <li>{interimResult}</li>}
+      </ul>
+    </div>
+  );
+}
+
+// const NewDreamSpeech = ({onSave}) => {
 //     const [speechDream, setSpeechDream] = useState("")
-
-
-
 
 //     // let isListening = false
 //     // let note = "Waiting"
@@ -48,13 +77,13 @@ const NewDreamSpeech = ({onSave}) => {
 //         setIsListening(!isListening)
    
 //     }
-    return (
-        <div>
-            <button className="record-button">
-                Record
-            </button>
-        </div>
+//     return (
+//         <div>
+//             <button className="record-button">
+//                 Record
+//             </button>
+//         </div>
 
-    )
-}
-export default NewDreamSpeech;
+//     )
+// }
+// export default NewDreamSpeech;
