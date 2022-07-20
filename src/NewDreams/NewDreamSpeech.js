@@ -1,19 +1,10 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { useState } from "react"
 
 const NewDreamSpeech = ({onSave}) => {
-    const [speechDream, setSpeechDream] = useState("")
+//     const [speechDream, setSpeechDream] = useState("")
 
-    return (
-        <div>
-            <button className="record-button">
-                Record
-            </button>
-        </div>
 
-    )
-
-}
 
 
 //     // let isListening = false
@@ -21,13 +12,7 @@ const NewDreamSpeech = ({onSave}) => {
 //     const [isListening, setIsListening] = useState(isListening)
 //     const [note, setNote] = useState(null)
 
-//     const handleToggleRecord = () => {
-//         console.log("Toggling record")
-
-//         isListening = !isListening
-//         setIsListening(isListening)
-//         console.log("isListening", isListening)
-
+//     useEffect(() => {
 //         if (isListening) {
 //             mic.start()
 //             mic.onend = () => {
@@ -54,7 +39,22 @@ const NewDreamSpeech = ({onSave}) => {
 //             }
 //         }
 //         }
-//     }
-// }
+//     }, [isListening])
 
+//     const handleToggleRecord = () => {
+//         console.log("Toggling record")
+
+//         // isListening = !isListening
+//         setIsListening(!isListening)
+   
+//     }
+    return (
+        <div>
+            <button className="record-button">
+                Record
+            </button>
+        </div>
+
+    )
+}
 export default NewDreamSpeech;

@@ -7,6 +7,7 @@ import NewDreamText from '../NewDreams/NewDreamText';
 import NewDreamSpeech from '../NewDreams/NewDreamSpeech';
 import Resources from '../Resources/Resources';
 import ShowAllDreams from '../AllDreams/AllDreams';
+import EditDreamText from '../Dream/Dream';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/resources" element={<Resources/>}/>
         <Route path="/newDreamSpeech" element={<NewDreamSpeech/>}/>
         <Route path="/allDreams" element={<ShowAllDreams/>}/>
+        <Route path="/dream/:id" element={<EditDreamText/>}/>
       </Routes>
     </HashRouter>
   );

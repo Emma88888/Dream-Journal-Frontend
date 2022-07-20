@@ -4,12 +4,12 @@ import "./style.css"
 
 const resources = [
   {
-    title: "The Sleep Foundation",
+    title: "About Sleep Hygiene",
     href: "https://www.sleepfoundation.org/sleep-hygiene",
     description: "test"
   },
   {
-    title: "The Sleep Foundation",
+    title: "Sleep and Mental Health",
     href: "https://www.sleepfoundation.org/mental-health",
     description: "test"
   },

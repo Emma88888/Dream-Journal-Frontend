@@ -3,15 +3,15 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const Home = () => {
-  const [data, setData] = useState([])
-  const api = "https://dream-journal-8.herokuapp.com/"
-  useEffect(() => {
-    axios.get(api)
-    .then(({data}) => {
-      setData(data)
-    }).catch(console.error)
-  },[])
-  console.log(data)
+  // const [data, setData] = useState([])
+  // const api = "https://dream-journal-8.herokuapp.com/"
+  // useEffect(() => {
+  //   axios.get(api)
+  //   .then(({data}) => {
+  //     setData(data)
+  //   }).catch(console.error)
+  // },[])
+  // console.log(data)
     return (
       <div className="home-div">
         <h1 className="title">Dream Journal </h1>

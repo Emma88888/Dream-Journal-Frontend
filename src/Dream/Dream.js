@@ -1,11 +1,13 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const api = "https://dream-journal-8.herokuapp.com/api/dream"
 
-const NewDreamText = () => {
+const EditDreamText = () => {
+    const [dream, setDream] = useState()
     const navigate = useNavigate()
+    const {id} = useParams()
     const onSubmit = (event) => {
         event.preventDefault()
         const fData = new FormData(event.target)
@@ -13,25 +15,37 @@ const NewDreamText = () => {
             dream: fData.get("dream"),
             date: fData.get("date")
         }
-        axios.post(api, params)
+        axios.put(`${api}/${id}`, params)
         .then(() => {
             navigate("/allDreams")
         })
         .catch(alert)
     }
+    useEffect(() => {
+        axios.get(`${api}/${id}`)
+        .then(({data}) => setDream(data.dream))
+    },[])
+    if (!dream) {
+        return (
+            <div>
+                Loading
+            </div>
+        )
+    }
+    console.log(dream)
     return (
         <form onSubmit={onSubmit} className="input-box">
             <textarea
             name='dream'
             required
+            defaultValue={dream.dream}
             />
-            <input type="date" name="date" required >
-            </input>
+            <input type="date" name="date" required defaultValue={dream.date} />
             <button className="create-button">
-                Create
+                Edit
             </button>
         </form>
     )
 }
 
-export default NewDreamText;
+export default EditDreamText;
