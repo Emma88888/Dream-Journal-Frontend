@@ -13,6 +13,7 @@ function App() {
 
   return (
     <HashRouter>
+      <div className='app-container'>
       <NavBar/>
       <Routes>
         <Route path="/" element={<Home/>}/>
@@ -22,6 +23,7 @@ function App() {
         <Route path="/allDreams" element={<ShowAllDreams/>}/>
         <Route path="/dream/:id" element={<EditDreamText/>}/>
       </Routes>
+      </div>
     </HashRouter>
   );
 }
