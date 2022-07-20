@@ -1,4 +1,3 @@
-import './App.css';
 import { useState } from 'react';
 import { Route, Routes, HashRouter } from "react-router-dom";
 import Home from '../Home/Home';
@@ -8,6 +7,7 @@ import NewDreamSpeech from '../NewDreams/NewDreamSpeech';
 import Resources from '../Resources/Resources';
 import ShowAllDreams from '../AllDreams/AllDreams';
 import EditDreamText from '../Dream/Dream';
+import "./style.css"
 
 function App() {
 
