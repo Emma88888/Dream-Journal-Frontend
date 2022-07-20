@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+## Dream Journaling App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Description 
 
-## Available Scripts
+My project will be a dream journaling app where users can keep track of their dreams - an important method for dealing with nightmares/terrors and practicing sleep hygiene. My project will include a speech to text feature in python, as well as night mode for reducing eye strain.
 
-In the project directory, you can run:
+## Wire Frames
 
-### `npm start`
+![0](https://media.git.generalassemb.ly/user/43030/files/e8100324-1ecf-4b13-981b-9de993a928fe)
+![0-1](https://media.git.generalassemb.ly/user/43030/files/a665f5fa-b23b-4bf5-b041-5c2736fa9ff1)
+![0-2](https://media.git.generalassemb.ly/user/43030/files/7181b48b-3d3b-4100-8117-8c3429a63e08)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Python for speech-to-text
+- MERN stack for frontend and API
+- Tailwind
 
-### `npm test`
+## Models
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`
+const Dream = new Schema({
+     date: Date,
+     dream: String
+})
+`
 
-### `npm run build`
+For my speech to text input, I will have to figure out what the data type is although I'm assuming it will be a string.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## User Stories
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- As a user, I want a simple, non-distracting interface that is focused on my sleep quality/hygiene.
+- As a user, I want to be able to use speech-to-text if it's easier for me than writing my dreams down.
+- As a user, I want to also have the option to write my dreams down.
+- As a user, I want to be able to access, delete and edit past dreams I've recorded.
+- As a user, I want access to resources that might help me with sleep quality.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### MVP Goals
 
-### `npm run eject`
+- CRUD for recorded/written dreams
+- Speech-to-text feature
+- Relaxing interface (research color theories)
+- Night mode
+- Date
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Stretch Goals
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- User authentication
+- Drawing/uploading images
+- Share dream to social media
+- Mark dreams as private/public
+- View other users' dreams
